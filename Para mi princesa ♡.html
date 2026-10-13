@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f7c5d5">
+<title>Para mi princesa ♡</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;1,500&family=Dancing+Script:wght@600&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--rose:#f7c5d5;--blush:#fde6ee;--cream:#fff8f1;--hot:#e0457b;--dust:#d596ab;--wine:#6b1f3a;--deep:#8f2c55;
+--serif:'Playfair Display',Georgia,serif;--hand:'Dancing Script','Snell Roundhand',cursive;--sans:'Nunito',-apple-system,'Segoe UI',Roboto,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+html,body{max-width:100%;overflow-x:hidden}
+body{font-family:var(--sans);color:var(--wine);background:linear-gradient(180deg,#fde6ee,#f7c5d5 45%,#fbd9e3);background-attachment:fixed;line-height:1.6;padding-top:env(safe-area-inset-top);padding-bottom:calc(env(safe-area-inset-bottom) + 70px)}
+button{font:inherit;color:inherit;border:0;cursor:pointer;background:none}
+:focus-visible{outline:3px solid var(--hot);outline-offset:3px}
+h1,h2{font-family:var(--serif);font-weight:500;line-height:1.2}
+.hand{font-family:var(--hand);font-weight:600}
+/* fondo flotante */
+.fx{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.fh{position:absolute;bottom:-40px;color:var(--hot);opacity:0;animation:rise linear infinite}
+.st{position:absolute;color:#fff;animation:tw ease-in-out infinite}
+@keyframes rise{0%{transform:translateY(0) rotate(0);opacity:0}15%{opacity:.35}85%{opacity:.25}100%{transform:translateY(-110vh) rotate(25deg);opacity:0}}
+@keyframes tw{0%,100%{opacity:.15;transform:scale(.7)}50%{opacity:.95;transform:scale(1.1)}}
+main,#intro{position:relative;z-index:1}
+/* intro */
+#intro{min-height:100vh;min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:28px 24px;gap:14px;transition:opacity .9s,transform .9s}
+#intro.out{opacity:0;transform:scale(1.04);pointer-events:none}
+.tag{font-family:var(--hand);font-size:1.45rem;color:var(--deep)}
+#intro h1{font-size:clamp(2rem,9vw,3.2rem);max-width:12em}
+#intro p.sub{max-width:22em;font-size:1.05rem}
+.bigheart{width:96px;height:96px;filter:drop-shadow(0 0 18px rgba(224,69,123,.55));animation:beat 2.6s ease-in-out infinite}
+@keyframes beat{0%,100%{transform:scale(1)}50%{transform:scale(1.09)}}
+.btn{position:relative;overflow:hidden;min-height:52px;padding:14px 30px;border-radius:999px;background:linear-gradient(135deg,#ef6a98,var(--hot));color:#fff;font-weight:600;font-size:1.05rem;box-shadow:0 8px 24px rgba(224,69,123,.35);transition:transform .2s,box-shadow .2s}
+.btn::after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-20deg);animation:shine 4s ease-in-out infinite}
+@keyframes shine{0%,60%{left:-60%}100%{left:130%}}
+.btn:active{transform:scale(.96)}
+@media(hover:hover){.btn:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(224,69,123,.45)}}
+.btn[disabled]{background:var(--dust);box-shadow:none;cursor:default}
+.btn[disabled]::after{display:none}
+/* secciones */
+main{display:none}
+main.on{display:block}
+section{min-height:70vh;padding:72px 22px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:20px}
+section h2{font-size:clamp(1.7rem,7vw,2.5rem);max-width:14em}
+.rv{opacity:0;transform:translateY(18px);transition:opacity 1s,transform 1s}
+.rv.in{opacity:1;transform:none}
+.paper{position:relative;width:100%;max-width:560px;background:var(--cream);border-radius:22px;padding:36px 26px 30px;text-align:left;box-shadow:0 18px 50px rgba(143,44,85,.2),inset 0 0 0 1px rgba(213,150,171,.35)}
+.paper::before{content:"";position:absolute;inset:9px;border:1px dashed rgba(213,150,171,.7);border-radius:15px;pointer-events:none}
+.paper p{font-size:1.06rem;margin-bottom:1.1em;line-height:1.75}
+.paper .sig{font-family:var(--hand);font-size:1.7rem;text-align:right;color:var(--hot);margin:.6em 0 0}
+.seal{position:absolute;top:-16px;left:50%;transform:translateX(-50%);color:var(--hot);font-size:2rem;text-shadow:0 2px 6px rgba(143,44,85,.3)}
+.lt p{opacity:0;transform:translateY(10px);transition:opacity .9s,transform .9s}
+.paper.in .lt p{opacity:1;transform:none}
+.paper.in .lt p:nth-child(2){transition-delay:.35s}.paper.in .lt p:nth-child(3){transition-delay:.7s}.paper.in .lt p:nth-child(4){transition-delay:1.05s}.paper.in .lt p:nth-child(5){transition-delay:1.4s}
+/* princesa */
+.crown{width:110px;filter:drop-shadow(0 0 14px rgba(255,255,255,.95)) drop-shadow(0 0 10px rgba(224,69,123,.4));animation:glow 3.2s ease-in-out infinite}
+@keyframes glow{0%,100%{opacity:.85;transform:translateY(0)}50%{opacity:1;transform:translateY(-5px)}}
+.pr p{max-width:23em;font-size:1.15rem}
+.pr .row{display:flex;gap:18px;align-items:center;font-size:1.8rem;color:var(--hot)}
+/* tarjetas */
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;width:100%;max-width:560px}
+.card{min-height:150px;padding:16px 12px;border-radius:20px;background:rgba(255,248,241,.78);box-shadow:0 8px 24px rgba(143,44,85,.14),inset 0 0 0 1px rgba(213,150,171,.4);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;transition:transform .25s,background .4s;position:relative;overflow:hidden}
+.card:active{transform:scale(.96)}
+.card .ic{font-size:2rem;color:var(--hot)}
+.card .lb{font-family:var(--serif);font-size:1.05rem}
+.card .msg{display:none;font-size:.95rem;line-height:1.45}
+.card.open{background:var(--cream);box-shadow:0 10px 28px rgba(224,69,123,.28),inset 0 0 0 2px var(--hot);animation:pop .5s}
+.card.open .msg{display:block}.card.open .lb{display:none}.card.open .ic{font-size:1.3rem}
+@keyframes pop{0%{transform:scale(.9)}60%{transform:scale(1.04)}100%{transform:scale(1)}}
+.hint{font-size:.95rem;color:var(--deep)}
+/* secreto */
+.reveal{max-width:520px;width:100%;max-height:0;opacity:0;overflow:hidden;transition:max-height 1s ease,opacity 1s,margin .5s}
+.reveal.open{max-height:700px;opacity:1}
+.reveal .paper{margin-top:10px}
+/* corazon grande */
+.tapheart{width:min(62vw,230px);aspect-ratio:1;display:grid;place-items:center;transition:transform .15s;filter:drop-shadow(0 10px 22px rgba(224,69,123,.45))}
+.tapheart:active{transform:scale(.9)}
+#phrase{min-height:3em;font-family:var(--hand);font-size:1.7rem;color:var(--hot);max-width:15em;line-height:1.3}
+/* intimo */
+.night{background:linear-gradient(180deg,rgba(143,44,85,0) 0,#a13560 14%,#8f2c55 86%,rgba(143,44,85,0) 100%);color:var(--cream);position:relative}
+.night::before{content:"";position:absolute;inset:0;background:radial-gradient(2px 2px at 12% 22%,#fff,transparent),radial-gradient(1.5px 1.5px at 80% 15%,#fff,transparent),radial-gradient(2px 2px at 30% 70%,#fff,transparent),radial-gradient(1.5px 1.5px at 88% 62%,#fff,transparent),radial-gradient(2px 2px at 55% 38%,#fff,transparent),radial-gradient(1.5px 1.5px at 66% 88%,#fff,transparent);animation:tw 5s ease-in-out infinite;pointer-events:none}
+.night .paper{background:rgba(255,248,241,.11);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);box-shadow:inset 0 0 0 1px rgba(255,255,255,.3);color:var(--cream);position:relative}
+.night .paper::before{border-color:rgba(255,255,255,.25)}
+.night h2{position:relative}
+/* final */
+#fin .glowheart{width:130px;filter:drop-shadow(0 0 22px #fff) drop-shadow(0 0 30px rgba(224,69,123,.8));animation:beat 2.8s ease-in-out infinite}
+#fin .paper{text-align:center}
+#fin .glowheart{transition:filter 1.4s,transform 1.4s}
+#fin .glowheart.lit{animation:none;transform:scale(1.22);filter:drop-shadow(0 0 34px #fff) drop-shadow(0 0 60px rgba(224,69,123,.95))}
+#fin .paper p{margin-bottom:1em}
+#kiss{min-height:60px;font-size:1.15rem;padding:16px 34px}
+#last{max-width:20em;font-family:var(--hand);font-size:1.8rem;color:var(--hot);opacity:0;transform:translateY(10px);transition:opacity 1.2s,transform 1.2s;min-height:1px}
+#last.in{opacity:1;transform:none}
+.small{margin-top:10px;display:flex;gap:18px;flex-wrap:wrap;justify-content:center;opacity:.9}
+.small button{font-size:.95rem;text-decoration:underline;color:var(--deep);padding:10px 6px;min-height:44px}
+/* particulas */
+.p{position:fixed;pointer-events:none;z-index:50;color:var(--hot);font-size:20px;animation:fly 1.6s ease-out forwards;will-change:transform,opacity}
+@keyframes fly{0%{opacity:1;transform:translate(0,0) scale(.6)}100%{opacity:0;transform:translate(var(--dx),var(--dy)) scale(1.3) rotate(var(--r))}}
+/* musica */
+#music{position:fixed;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:60;min-height:44px;max-width:calc(100vw - 24px);padding:8px 16px;border-radius:999px;background:rgba(255,248,241,.94);color:var(--deep);font-size:.88rem;font-weight:600;display:flex;align-items:center;gap:8px;box-shadow:0 6px 18px rgba(143,44,85,.25),inset 0 0 0 1px rgba(213,150,171,.5);transition:box-shadow .5s}
+#music.on{box-shadow:0 0 0 3px rgba(224,69,123,.35),0 6px 18px rgba(143,44,85,.25)}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition-duration:.01s!important;scroll-behavior:auto!important}.rv,.lt p{opacity:1;transform:none}.fh{display:none}}
+@media(max-width:360px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff8fb3"/><stop offset="1" stop-color="#e0457b"/></linearGradient></defs></svg>
+<div class="fx" id="fx" aria-hidden="true"></div>
+
+<div id="intro">
+  <p class="tag">♡ Un detallito para mi princesa ♡</p>
+  <svg class="bigheart" viewBox="0 0 24 24" aria-hidden="true"><path fill="url(#g1)" d="M12 21s-7.5-4.6-9.6-9.2C.9 8.5 2.6 5 6 5c2.1 0 3.4 1.1 4.2 2.4h.2C11.2 6.1 12.5 5 14.6 5c3.4 0 5.1 3.5 3.6 6.8C16.1 16.4 12 21 12 21z" transform="translate(1.2 -.6)"/></svg>
+  <h1>Preparé algo para vos, mi amor</h1>
+  <p class="sub">Porque te amo y quería encontrar una forma de demostrártelo, aunque siento que las palabras nunca me van a alcanzar.</p>
+  <button class="btn" id="open">Abrí tu sorpresita, hermosa ♡</button>
+</div>
+
+<main id="main">
+  <section id="carta">
+    <article class="paper rv" id="paper">
+      <span class="seal" aria-hidden="true">♥</span>
+      <div class="lt">
+        <p>Mi amor, quiero contarte algo. Cuando éramos amigos, yo soñaba con estar con vos. Muchas veces lo pensaba como algo imposible y no sabía si algún día iba a pasar. Y ahora que estamos juntos, estoy muy feliz de poder decir que esa persona con la que tanto soñaba es mi novia. No lo doy por sentado, de verdad lo valoro un montón.</p>
+        <p>Sos muy valiosa para mí, mi vida. Te amo más que a nadie, y no solo porque tus ojitos, tus cachetes y tus besos me vuelven loco, sino por cómo sos vos, por cómo sos conmigo y por todo lo que compartimos. Quiero que te sientas querida, respetada, escuchada y cuidada, y que estés segura de lo que siento por vos.</p><p>Me encanta estar cerquita tuyo. Abrazarte y quedarme así sin que el momento termine, llenarte la carita de besos todo el día si pudiera. Son cosas que me nacen a mí y que me hacen feliz de verdad.</p>
+        <p>Nunca quiero que sientas que te quiero solo de palabra. Quiero demostrártelo con lo que hago, estar con vos en los momentos lindos y también cuando las cosas sean más difíciles, apoyarte, acompañarte y seguir aprendiendo a ser una buena pareja para vos.</p><p>Me ilusiona pensar en un futuro con vos, compartir mi vida y vivir muchas cosas juntos. Sos el amor de mi vida y quiero amarte, cuidarte y respetarte por siempre. Lo digo de verdad.</p><p>Hice esta página porque quería encontrar una forma de mostrarte todo lo que siento. Pero, aun haciéndola y escribiendo todo esto, siento que me quedo corto. Hay tanto que quisiera decirte que no me alcanza con unas cuantas frases. Espero que te guste, mi amor. ♡</p>
+        
+        
+      </div>
+      <p class="sig">Con todo mi amor, para mi princesa ♡</p>
+    </article>
+  </section>
+
+  <section class="pr">
+    <svg class="crown rv" viewBox="0 0 64 48" aria-hidden="true"><defs><linearGradient id="g2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff3d6"/><stop offset="1" stop-color="#f3b6c9"/></linearGradient></defs><path d="M6 40 L2 12 L19 26 L32 6 L45 26 L62 12 L58 40 Z" fill="url(#g2)" stroke="#e0457b" stroke-width="2" stroke-linejoin="round"/><circle cx="2" cy="12" r="3" fill="#e0457b"/><circle cx="32" cy="6" r="3.5" fill="#e0457b"/><circle cx="62" cy="12" r="3" fill="#e0457b"/><rect x="6" y="40" width="52" height="5" rx="2.5" fill="#e0457b"/></svg>
+    <h2 class="rv">Para la princesa más hermosa ♡</h2>
+    <p class="rv">Capaz no tengo un castillo para regalarte, mi princesa, pero sí tengo un montón de ganas de seguir compartiendo momentos con vos.</p>
+    <div class="row rv" aria-hidden="true"><span>✦</span><span>♥</span><span>✦</span></div>
+  </section>
+
+  <section id="cositas">
+    <h2 class="rv">Cositas que me encantan de vos ♡</h2>
+    <p class="hint rv">Tocá cada tarjetita, mi amor</p>
+    <div class="grid rv" id="grid"></div>
+  </section>
+
+  <section id="secreto">
+    <h2 class="rv">Una cosita más para vos ♡</h2>
+    <p class="rv">Tocá acá, que todavía no terminamos, mi amor.</p>
+    <button class="btn rv" id="reveal">Descubrir mensajito ♡</button>
+    <div class="reveal" id="secret" aria-live="polite">
+      <article class="paper"><span class="seal" aria-hidden="true">✦</span><p>Holaaa, mi loquita. Veo que llegaste hasta acá. Ojalá pudiera darte un besito ahora mismo, así que te mando uno bien grande desde acá. ♡</p></article>
+    </div>
+  </section>
+
+  <section id="toques">
+    <h2 class="rv">Tocá el corazón</h2>
+    <button class="tapheart rv" id="tap" aria-label="Tocar el corazón"><svg viewBox="0 0 24 24" width="100%" aria-hidden="true"><path fill="url(#g1)" d="M12 21s-7.5-4.6-9.6-9.2C.9 8.5 2.6 5 6 5c2.1 0 3.4 1.1 4.2 2.4h.2C11.2 6.1 12.5 5 14.6 5c3.4 0 5.1 3.5 3.6 6.8C16.1 16.4 12 21 12 21z" transform="translate(1.2 -.6)"/></svg></button>
+    <p id="phrase" aria-live="polite"></p>
+  </section>
+
+  <section class="night">
+    <h2 class="rv">Y por si no te lo digo suficiente…</h2>
+    <article class="paper rv"><p>No hice esto por ninguna fecha especial. Lo hice porque me nació, y porque cualquier día es bueno para que sepas que pienso en vos. Gracias por dejarme ser tu novio. ♡</p></article>
+  </section>
+
+  <section id="fin">
+    <svg class="glowheart" id="glow" viewBox="0 0 24 24" aria-hidden="true"><path fill="url(#g1)" d="M12 21s-7.5-4.6-9.6-9.2C.9 8.5 2.6 5 6 5c2.1 0 3.4 1.1 4.2 2.4h.2C11.2 6.1 12.5 5 14.6 5c3.4 0 5.1 3.5 3.6 6.8C16.1 16.4 12 21 12 21z" transform="translate(1.2 -.6)"/></svg>
+    <h2 class="rv">Para el amor de mi vida ♡</h2>
+    <article class="paper rv"><p>Preparé cada parte pensando en vos.</p></article>
+    <button class="btn rv" id="kiss">Una última cosita para vos ♡</button>
+    <p id="last" aria-live="polite">Te amo más que a nadie, mi amor. Quiero toda una vida con vos y, aunque haga mil cosas para demostrártelo, siento que nunca me va a alcanzar para expresar todo lo que siento por vos. ♡</p>
+    
+  </section>
+</main>
+
+<button id="music" type="button" aria-pressed="false"><span aria-hidden="true">♪</span> Reproducir música ♡</button>
+
+<script>
+(function(){
+"use strict";
+// MÚSICA: si lo dejás vacío, suena una musiquita de piano suave generada por la propia página. Si preferís una canción tuya, subí el archivo (ej: "cancion.mp3") junto a index.html y escribí su nombre acá.
+var MUSIC_SRC="";
+var RM=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;
+var $=function(i){return document.getElementById(i)};
+var rnd=function(a,b){return a+Math.random()*(b-a)};
+
+// fondo: corazones y estrellitas
+(function(){var fx=$("fx"),f=document.createDocumentFragment(),i,e;
+for(i=0;i<12;i++){e=document.createElement("span");e.className="fh";e.textContent=i%3?"♥":"♡";e.style.cssText="left:"+rnd(2,96)+"%;font-size:"+rnd(12,26)+"px;animation-duration:"+rnd(14,26)+"s;animation-delay:-"+rnd(0,24)+"s";f.appendChild(e)}
+for(i=0;i<16;i++){e=document.createElement("span");e.className="st";e.textContent="✦";e.style.cssText="left:"+rnd(2,96)+"%;top:"+rnd(2,96)+"%;font-size:"+rnd(7,15)+"px;animation-duration:"+rnd(3,7)+"s;animation-delay:-"+rnd(0,6)+"s";f.appendChild(e)}
+fx.appendChild(f)})();
+
+// partículas con límite
+var live=0,MAX=44,G=["♥","♡","✦","♥"];
+function burst(x,y,n,spread){
+ if(RM)n=Math.min(n,3);
+ for(var i=0;i<n&&live<MAX;i++){
+  var s=document.createElement("span");live++;
+  s.className="p";s.textContent=G[i%G.length];
+  var a=rnd(0,6.283),d=rnd(40,spread);
+  s.style.cssText="left:"+x+"px;top:"+y+"px;font-size:"+rnd(14,28)+"px;--dx:"+Math.cos(a)*d+"px;--dy:"+(Math.sin(a)*d-rnd(30,90))+"px;--r:"+rnd(-40,40)+"deg;animation-duration:"+rnd(1.2,1.9)+"s";
+  s.addEventListener("animationend",function(){this.remove();live--});
+  document.body.appendChild(s);
+ }
+}
+function center(el){var r=el.getBoundingClientRect();return[r.left+r.width/2,r.top+r.height/2]}
+
+// aparecer al scrollear
+var io=null;
+if("IntersectionObserver" in window){io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.15})}
+document.querySelectorAll(".rv").forEach(function(el){io?io.observe(el):el.classList.add("in")});
+
+// intro -> contenido
+$("open").addEventListener("click",function(){
+ var c=center(this);burst(c[0],c[1],18,150);
+ $("intro").classList.add("out");
+ setTimeout(function(){$("intro").style.display="none";$("main").classList.add("on");window.scrollTo(0,0)},RM?20:800);
+});
+
+// tarjetas
+var cards=[
+ ["✿","ojitos","Me encantan tus ojos. Podría quedarme mirándolos un montón de tiempo, y ese lunar tan lindo que tenés dentro de uno de ellos también me encanta."],
+ ["♡","cachetes","Tus cachetes, mi gordita, me dan ganas de apretártelos todo el tiempo."],
+ ["❀","besos","Podría pasarme todo el día llenándote la carita de besos y no me cansaría nunca."],
+ ["♥","perfume","Cuando estoy cerquita de tu cuello y siento tu perfume, me dan ganas de quedarme ahí con vos."],
+ ["✦","tus besitos","Me hace muy feliz cuando vos también me buscás un besito."],
+ ["♛","abrazos","Me encanta abrazarte y quedarme así, cerquita tuyo. Siempre quiero que ese ratito dure un poquito más."],
+ ["❁","carita, pelo y lentes","Tu carita, tu pelo, cómo te quedan los lentes… me encanta todo, mi hermosa."],
+ ["💗","tu forma de ser","Y más allá de cómo te ves, a vos te amo por cómo sos. Por cómo sos conmigo y por todo lo que significás para mí."]];
+var grid=$("grid");
+cards.forEach(function(c){
+ var b=document.createElement("button");b.className="card";b.type="button";b.setAttribute("aria-expanded","false");
+ b.innerHTML='<span class="ic" aria-hidden="true">'+c[0]+'</span><span class="lb">'+c[1]+'</span><span class="msg">'+c[2]+'</span>';
+ b.addEventListener("click",function(){
+  if(b.classList.contains("open"))return;
+  b.classList.add("open");b.setAttribute("aria-expanded","true");
+  var p=center(b);burst(p[0],p[1],6,70);
+ });
+ grid.appendChild(b);
+});
+
+// sorpresa escondida
+var rb=$("reveal"),sec=$("secret");
+rb.addEventListener("click",function(){
+ if(sec.classList.contains("open"))return;
+ sec.classList.add("open");
+ rb.textContent="Mensajito descubierto ♡";rb.disabled=true;
+ var c=center(rb);burst(c[0],c[1],14,130);
+ setTimeout(function(){sec.scrollIntoView({behavior:RM?"auto":"smooth",block:"center"})},350);
+});
+
+// corazón grande
+var phrases=["Un besito para vos ♡","Acá estoy, mandándote besitos.","Otro besito más, porque no me canso.","Sos muy especial para mí, mi loquita.","Si pudiera, ahora mismo te daría un abrazo enorme.","Te mando todo mi cariño, mi vida."];
+var taps=0,last=-1,ph=$("phrase");
+$("tap").addEventListener("click",function(){
+ taps++;var c=center(this);burst(c[0],c[1]-20,5,110);
+ if(taps>=3&&taps%2===1){var i;do{i=Math.floor(Math.random()*phrases.length)}while(i===last);last=i;ph.textContent=phrases[i]}
+});
+
+// final
+var kiss=$("kiss"),lastEl=$("last");
+kiss.addEventListener("click",function(){
+ var w=window.innerWidth,h=window.innerHeight,i;
+ burst(w/2,h/2,MAX,Math.max(w,h)/2);
+ setTimeout(function(){burst(w/2,h*.6,MAX,Math.max(w,h)/2)},500);
+ $("glow").classList.add("lit");setTimeout(function(){lastEl.classList.add("in")},RM?50:1700);
+ setTimeout(function(){lastEl.scrollIntoView({behavior:RM?"auto":"smooth",block:"center"})},300);
+});
+var ag=$("again");if(ag)ag.addEventListener("click",function(){$("carta").scrollIntoView({behavior:RM?"auto":"smooth",block:"start"})});
+var rt=$("restart");if(rt)rt.addEventListener("click",function(){
+ document.querySelectorAll(".card.open").forEach(function(c){c.classList.remove("open");c.setAttribute("aria-expanded","false")});
+ sec.classList.remove("open");rb.textContent="Descubrir mensajito ♡";rb.disabled=false;
+ taps=0;ph.textContent="";lastEl.classList.remove("in");$("glow").classList.remove("lit");
+ $("main").classList.remove("on");
+ var intro=$("intro");intro.style.display="";
+ void intro.offsetWidth;intro.classList.remove("out");
+ window.scrollTo(0,0);
+});
+
+// música: piano suave sintetizado en el navegador (o un archivo, si completás MUSIC_SRC)
+(function(){
+ var mb=$("music"),playing=false,started=false,au=null,ctx,master,verb,next=0,step=0;
+ var F=function(m){return 440*Math.pow(2,(m-69)/12)};
+ var CH=[[48,55,59,64],[45,52,55,60],[41,48,52,57],[43,50,55,59]];
+ var MEL=[[[0,76],[4,72]],[[0,76],[3,79],[6,76]],[[0,77],[4,72]],[[0,74],[4,71],[6,74]],[[0,79],[4,76]],[[0,72],[3,76],[6,81]],[[0,77],[4,81]],[[0,79],[6,74]]];
+ var AR=[0,1,2,3,2,1,2,3];
+ function note(m,t,d,v){
+  var o=ctx.createOscillator(),o2=ctx.createOscillator(),g=ctx.createGain(),f=ctx.createBiquadFilter();
+  o.type="sine";o2.type="triangle";o.frequency.value=o2.frequency.value=F(m);o2.detune.value=4;
+  f.type="lowpass";f.frequency.value=2200;
+  g.gain.setValueAtTime(0.0001,t);g.gain.linearRampToValueAtTime(v,t+0.015);g.gain.exponentialRampToValueAtTime(0.0001,t+d);
+  o.connect(f);o2.connect(f);f.connect(g);g.connect(master);g.connect(verb);
+  o.start(t);o2.start(t);o.stop(t+d+0.05);o2.stop(t+d+0.05);
+ }
+ function sched(){
+  while(next<ctx.currentTime+0.7){
+   var bar=Math.floor(step/8)%8,s=step%8,c=CH[bar%4];
+   note(c[AR[s]],next,1.6,s===0?0.35:0.2);
+   MEL[bar].forEach(function(x){if(x[0]===s)note(x[1],next,2.4,0.3)});
+   next+=0.42;step++;
+  }
+ }
+ function init(){
+  var AC=window.AudioContext||window.webkitAudioContext;if(!AC)return false;
+  ctx=new AC();master=ctx.createGain();master.gain.value=0.12;master.connect(ctx.destination);
+  verb=ctx.createConvolver();
+  var len=Math.floor(ctx.sampleRate*2),b=ctx.createBuffer(2,len,ctx.sampleRate),c,i,d;
+  for(c=0;c<2;c++){d=b.getChannelData(c);for(i=0;i<len;i++)d[i]=(Math.random()*2-1)*Math.pow(1-i/len,3)}
+  verb.buffer=b;var wet=ctx.createGain();wet.gain.value=0.5;verb.connect(wet);wet.connect(master);
+  next=ctx.currentTime+0.1;setInterval(sched,150);
+  return true;
+ }
+ function paint(){
+  mb.classList.toggle("on",playing);
+  mb.setAttribute("aria-pressed",playing?"true":"false");
+  mb.innerHTML=playing?'<span aria-hidden="true">❚❚</span> Pausar música ♡':'<span aria-hidden="true">♪</span> Reproducir música ♡';
+ }
+ mb.addEventListener("click",function(){
+  if(MUSIC_SRC){
+   if(!au){au=new Audio(MUSIC_SRC);au.loop=true;au.volume=0.12}
+   if(!playing){var p=au.play();if(p&&p.catch)p.catch(function(){});playing=true}else{au.pause();playing=false}
+  }else if(!started){
+   if(!init())return;
+   started=true;playing=true;if(ctx.resume)ctx.resume();
+  }else if(playing){ctx.suspend();playing=false}
+  else{ctx.resume();playing=true}
+  paint();
+ });
+})();
+})();
+</script>
+</body>
+</html>
